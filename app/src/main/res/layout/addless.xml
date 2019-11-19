@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="143dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="37dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="49dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/add"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonLess"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLess"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLess"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="49dp"
+        android:layout_marginEnd="53dp"
+        android:background="@android:color/holo_red_light"
+        android:text="@string/less"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="274dp"
+        android:layout_marginEnd="53dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/Reset"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonexit"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLess" />
+
+    <Button
+        android:id="@+id/buttonexit"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="49dp"
+        android:background="@android:color/holo_red_light"
+        android:text="@string/exit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonReset"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReset"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

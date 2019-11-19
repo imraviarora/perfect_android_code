@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ravi.perfect">
+    <uses-permission android:name="android.permission.INTERNET">s</uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <activity android:name=".LoginPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Perfect1">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.PERFECT1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Perfect">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.PERFECT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Email">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.EMAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Addless">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.ADDLESS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Backgroundimage">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.BACKGROUNDIMAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ToggleButton">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.TOGGLEBUTTON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".OrderFood">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.ORDERFOOD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SendingBundle">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.SENDBUNDLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RetrieveBundle">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.RETRIEVEBUNDLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Alertdialog">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.ALERTDIALOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Spinnerr">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.SPINNER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Autocompletetext">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.ACTV" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Ratingbar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.RATINGBAR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Ivrguruwebview">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.IVRGURUWEBVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Seekbar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.SEEKBAR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Progressbar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.PROGRESSBAR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Phonecall">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.PHONECALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Menu">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.MENULIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainTab"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.MAINTAB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Nvgdrw.MainNavDrw"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.MAINNAVDRW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".BottomNvgView.BottomNvgview"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.BOTTOMNAVIGATIONVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Testing"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.TESTING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CustomList_Main.CustomListMain"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.CUSTOMLIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Report"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.ravi.perfect.REPORT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>

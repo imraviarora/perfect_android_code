@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/etstartdate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="From Date"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/etenddate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Deprecated" />
+
+    <EditText
+        android:id="@+id/etenddate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etstartdate"
+        android:layout_below="@+id/etstartdate"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="16dp"
+        android:clickable="true"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="To Date"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/cbSelectAll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etstartdate"
+        tools:ignore="Deprecated" />
+
+    <CheckBox
+        android:id="@+id/cbSelectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etenddate"
+        android:layout_below="@+id/etenddate"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="16dp"
+        android:text="Select All"
+        app:layout_constraintBottom_toTopOf="@+id/cbCallSummary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etenddate" />
+
+    <CheckBox
+        android:id="@+id/cbCallSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cbSelectAll"
+        android:layout_below="@+id/cbSelectAll"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="16dp"
+        android:text="Call Summary"
+        app:layout_constraintBottom_toTopOf="@+id/cbMissedcallreport"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbSelectAll" />
+
+    <CheckBox
+        android:id="@+id/cbMissedcallreport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cbCallSummary"
+        android:layout_below="@+id/cbCallSummary"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:text="MIssed Call Report"
+        app:layout_constraintBottom_toTopOf="@+id/cbOutgoingcallreport"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCallSummary" />
+
+    <CheckBox
+        android:id="@+id/cbOutgoingcallreport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cbMissedcallreport"
+        android:layout_below="@+id/cbMissedcallreport"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:text="Outgoing Call Report"
+        app:layout_constraintBottom_toTopOf="@+id/cbIncomingcallreport"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbMissedcallreport" />
+
+    <CheckBox
+        android:id="@+id/cbIncomingcallreport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cbOutgoingcallreport"
+        android:layout_below="@+id/cbOutgoingcallreport"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="16dp"
+        android:text="Incoming Call Report"
+        app:layout_constraintBottom_toTopOf="@+id/cbTimeslots"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbOutgoingcallreport" />
+
+    <CheckBox
+        android:id="@+id/cbTimeslots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cbIncomingcallreport"
+        android:layout_below="@+id/cbIncomingcallreport"
+        android:layout_marginLeft="16dp"
+        android:text="Time Slots"
+        app:layout_constraintBottom_toTopOf="@+id/buttonexportreport"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbIncomingcallreport" />
+
+    <Button
+        android:id="@+id/buttonexportreport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etenddate"
+        android:layout_below="@+id/cbTimeslots"
+        android:layout_marginBottom="192dp"
+        android:layout_marginRight="48dp"
+        android:background="@android:color/darker_gray"
+        android:text="Export Report"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTimeslots" />
+
+</android.support.constraint.ConstraintLayout>

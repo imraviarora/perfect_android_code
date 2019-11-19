@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:shownIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_mess"
+            android:icon="@drawable/ic_mail_black_24dp"
+            android:title="Message" />
+        <item
+            android:id="@+id/nav_cht"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="Chat" />
+        <item
+            android:id="@+id/nav_prof"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Profile" />
+
+    </group>
+
+    <item android:title="Communicate">
+
+        <menu>
+            <item
+                android:id="@+id/nav_shre"
+                android:icon="@drawable/ic_share_black_24dp"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_snd"
+                android:icon="@drawable/ic_send_black_24dp"
+                android:title="Send" />
+
+        </menu>
+    </item>
+
+
+</menu>

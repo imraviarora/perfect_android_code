@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/log3">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_above="@+id/etusername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/prof"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <EditText
+        android:id="@+id/etusername"
+        android:layout_width="296dp"
+        android:layout_height="68dp"
+        android:layout_above="@+id/etpswrd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+        android:ems="10"
+        android:hint="Enter Username :"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="381dp" />
+
+    <EditText
+        android:id="@+id/etpswrd"
+        android:layout_width="296dp"
+        android:layout_height="68dp"
+        android:layout_above="@+id/btnlogin"
+        android:layout_alignStart="@+id/etusername"
+        android:layout_marginBottom="103dp"
+        android:drawableLeft="@drawable/passwordblacklock"
+        android:ems="10"
+        android:hint="Enter Passcode :"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:singleLine="true"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnexit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:drawableRight="@drawable/login"
+        android:text="LOGIN  "
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="606dp" />
+
+    <Button
+        android:id="@+id/btnexit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="25dp"
+        android:drawableLeft="@drawable/exitapp"
+        android:text="EXIT"
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="709dp" />
+</RelativeLayout>

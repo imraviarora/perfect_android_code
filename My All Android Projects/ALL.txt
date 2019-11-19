@@ -1,0 +1,171 @@
+//----------	MainActivity.java	---------------------
+
+package com.example.ravi.perfect;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    Button ord;
+    CheckBox piza,drnk,bread,burg,fri,past;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        addListenerOnButtonClick();
+    }
+    public void addListenerOnButtonClick(){
+        ord=findViewById(R.id.buttonOrder);
+        piza=findViewById(R.id.pizzaBox);
+        drnk=findViewById(R.id.drinkBox);
+        bread=findViewById(R.id.breadBox);
+        burg=findViewById(R.id.burgerBox);
+        fri=findViewById(R.id.friesBox);
+        past=findViewById(R.id.pastaBox);
+
+        ord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int totalamnt=0;
+                StringBuilder sb=new StringBuilder();
+                sb.append("Your order is - ");
+                if(piza.isChecked()){
+                    totalamnt=totalamnt+250;
+                    sb.append("\nPizza : Rs.250");
+                }
+                if (drnk.isChecked()){
+                    totalamnt=totalamnt+65;
+                    sb.append("\nCold Drink : Rs.65");
+                }if (burg.isChecked()){
+                    totalamnt=totalamnt+120;
+                    sb.append("\nBurger : Rs.120");
+                }if (past.isChecked()){
+                    totalamnt=totalamnt+90;
+                    sb.append("\nPasta : Rs.90");
+                }if (bread.isChecked()){
+                    totalamnt=totalamnt+95;
+                    sb.append("\nGarlic Bread : Rs.95");
+                }if (fri.isChecked()){
+                    totalamnt=totalamnt+75;
+                    sb.append("\nFrench Fries : Rs.75");
+                }
+                sb.append("\n\nTotal Amount Payble : "+totalamnt);
+                Toast.makeText(getApplicationContext(),sb.toString(),Toast.LENGTH_LONG).show();
+            }
+
+        });
+    }
+}
+
+
+//-----------	activity_main.xml flie
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/pizzaBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="53dp"
+        android:text="@string/pizza"
+        app:layout_constraintEnd_toEndOf="@+id/friesBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/drinkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="75dp"
+        android:layout_marginTop="53dp"
+        android:text="@string/colddrink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/burgerBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="107dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="106dp"
+        android:text="@string/burger"
+        app:layout_constraintBottom_toBottomOf="@+id/friesBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pizzaBox" />
+
+    <CheckBox
+        android:id="@+id/breadBox"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginBottom="108dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="106dp"
+        android:text="@string/garlicbread"
+        app:layout_constraintBottom_toBottomOf="@+id/pastaBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/friesBox"
+        app:layout_constraintTop_toTopOf="@+id/drinkBox"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/friesBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:text="@string/frenchfries"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/pastaBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:text="@string/pasta"
+        app:layout_constraintBaseline_toBaselineOf="@+id/friesBox"
+        app:layout_constraintStart_toEndOf="@+id/friesBox"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="119dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>
+
+
+//--------------	strings.xml
+
+<resources>
+    <string name="app_name">Perfect</string>
+    <string name="pizza">Pizza</string>
+    <string name="colddrink">Cold Drink</string>
+    <string name="pasta">Pasta</string>
+    <string name="garlicbread">Garlic Bread</string>
+    <string name="burger">Burger</string>
+    <string name="frenchfries">French Fries</string>
+    <string name="order">Order</string>
+
+</resources>

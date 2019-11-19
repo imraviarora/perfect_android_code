@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/drawer_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+    <item
+        android:id="@+id/drawer_profile"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/drawer_adduser"
+        android:icon="@drawable/ic_person_add_black_24dp"
+        android:title="Add New User" />
+    <item
+        android:id="@+id/drawer_message"
+        android:icon="@drawable/ic_chat_black_24dp"
+        android:title="Messages" />
+    <item
+        android:id="@+id/drawer_storage"
+        android:icon="@drawable/ic_cloud_black_24dp"
+        android:title="Storage" />
+    <item
+        android:id="@+id/drawer_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings" />
+    <item
+        android:id="@+id/drawer_logout"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:title="Logout" />
+
+</menu>
